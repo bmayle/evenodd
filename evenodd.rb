@@ -15,3 +15,11 @@ def numbereval(test_number)
 		"odd"
 	end
 end
+
+def evenoddchecker(test_number)
+	if getnumber(test_number) == Integer
+		numbereval(test_number)
+	else
+		"You have not entered a valid number."
+	end
+end
