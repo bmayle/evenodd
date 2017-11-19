@@ -7,6 +7,15 @@ class TestEvenOdd < Minitest::Test
     end
 
     def test_assert_that_number_is_integer
-    	assert_equal(Integer, getnumber())
+    	assert_equal(Integer, getnumber(7))
     end
-end
+
+    def test_assert_that_wombat_is_not_a_integer
+    	assert_equal(false, getnumber("wombat"))
+    end
+
+    def test_assert_that_1_is_odd
+    	assert_equal("odd", numbereval(1))
+    end
+
+ end
