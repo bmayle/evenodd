@@ -23,7 +23,18 @@ class TestEvenOdd < Minitest::Test
 	end
 
 	    def test_assert_that_3_is_odd
-    	assert_equal("odd", numbereval(3))
+    		assert_equal("odd", numbereval(3))
     end
 
- end
+    	def test_assert_that_evenoddchecker_says_1_is_odd
+			assert_equal("odd", evenoddchecker(1))
+		end
+
+		def test_assert_that_evenoddchecker_says_2_is_even
+			assert_equal("even", evenoddchecker(2))
+		end
+
+		def test_assert_that_evenoddchecker_says_wombat_is_not_valid
+			assert_equal("You have not entered a valid number.", evenoddchecker("Wombat"))
+		end
+end
